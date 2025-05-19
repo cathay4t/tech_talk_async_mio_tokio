@@ -9,8 +9,10 @@ const BUFF_SIZE: usize = 4096;
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut task_set = JoinSet::new();
+    let mut times: Vec<u32> = (1..11).collect();
+    times.reverse();
 
-    for x in 1..11 {
+    for x in times {
         task_set.spawn(async move {
             call_srv(x * 200).await.unwrap();
         });
