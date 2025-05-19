@@ -1,0 +1,16 @@
+[package]
+name = "demo-mio-srv"
+description = "Demo server using mio"
+version.workspace = true
+authors.workspace = true
+license.workspace = true
+rust-version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "mio-srv"
+path = "mio_srv.rs"
+
+[dependencies]
+mio = { workspace = true }
+nix = { workspace = true }

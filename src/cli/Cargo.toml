@@ -1,0 +1,15 @@
+[package]
+name = "demo-cli"
+description = "Demo client"
+version.workspace = true
+authors.workspace = true
+license.workspace = true
+rust-version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "demo-cli"
+path = "cli.rs"
+
+[dependencies]
+tokio = { workspace = true }

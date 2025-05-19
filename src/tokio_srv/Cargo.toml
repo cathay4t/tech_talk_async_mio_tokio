@@ -1,0 +1,15 @@
+[package]
+name = "tokio-srv"
+description = "Demo server using tokio"
+version.workspace = true
+authors.workspace = true
+license.workspace = true
+rust-version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "tokio-srv"
+path = "tokio_srv.rs"
+
+[dependencies]
+tokio = { workspace = true }
