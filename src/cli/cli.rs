@@ -35,7 +35,11 @@ async fn call_srv(time_ms: u32) -> Result<(), Box<dyn std::error::Error>> {
     // TODO: Keep retry till end.
     stream.read(buff.as_mut_slice()).await?;
 
-    println!("Got reply from server: {}", String::from_utf8(buff)?);
+    println!(
+        "Request {} ms got reply from server: {}",
+        time_ms,
+        String::from_utf8(buff)?
+    );
 
     Ok(())
 }
