@@ -71,7 +71,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         HashMap::with_capacity(CLIENT_CAPACITY);
 
     loop {
-        poll.poll(&mut events, Some(std::time::Duration::from_secs(2)))?;
+        poll.poll(&mut events, None)?;
 
         for event in events.iter() {
             match event.token() {
