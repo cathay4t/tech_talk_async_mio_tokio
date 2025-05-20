@@ -10,9 +10,10 @@ Write a server:
 
 Write a client:
  * Create 10 threads
- * Each thread will connect to `127.0.0.1:1234` and sending a random u32
+ * Each thread will connect to `127.0.0.1:1234` and sending a different u32
    integer.
- * Wait server's reply and print it.
+ * Wait server's reply and print it. Expecting server to reply in correct order
+   (smaller number sleep should reply earlier).
 
 Please try to get the server done in two ways:
  * mio(https://github.com/tokio-rs/mio) single thread.
