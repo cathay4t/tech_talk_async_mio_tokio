@@ -5,7 +5,7 @@
 Write a server:
 
  * Listen on TCP socket `127.0.0.1:1234`
- * Accepting a u32 native byte order from client.
+ * Accepting a u32 network byte order from client.
  * Sleep u32 milliseconds and reply `done-<u32>ms` string to client.
 
 Write a client:
